@@ -237,7 +237,7 @@ footer {
   font-size: 18px;
   line-height: 26px;
   color: var(--color-7);
-  /* padding: 0 25em 0 10em; */
+  padding: 0 4em;
   z-index: 2;
   max-width: fit-content;
 }
