@@ -18,15 +18,117 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
 body {
   font-family: "Red Hat Display", sans-serif;
   font-optical-sizing: auto;
 }
 
 .container {
-  --max-width: 30rem;
+  --max-width: 80rem;
   --padding: 2em;
 
   width: min(var(--max-width), 100% - var(--padding) * 1);
   margin-inline: auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 2.5em 0;
+}
+
+.hero--section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+  overflow: hidden;
+}
+
+.hero--section div:first-child {
+  transform: translate(-8.5%);
+}
+
+.hero--section div:last-child {
+  transform: translate(8.5%);
+}
+
+.hero--text--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3.5em 5em 0 5em;
+}
+
+.hero--text--content h1 {
+  font-size: 4.5em;
+  color: var(--color-3);
+  padding: 0 1em;
+  padding-bottom: 0.3em;
+  line-height: 1;
+}
+
+.hero--text--content p {
+  font-size: 18px;
+  color: var(--color-4);
+}
+
+.hero--btns {
+  margin-top: 1.4em;
+}
+
+.hero--btns button {
+  border: 0;
+  border-radius: 29px;
+  padding: 0.8em 1.2em;
+  color: var(--color-7);
+  font-weight: bold;
+}
+
+.hero--btns button span {
+  color: var(--color-5);
+}
+
+.hero--btns button:first-child {
+  background-color: var(--color-1);
+  margin-right: 0.3em;
+}
+
+.hero--btns button:last-child {
+  background-color: var(--color-2);
+}
+
+.o1--line--section {
+  min-height: 15em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.o1--line--section .num {
+  width: 3em;
+  color: rgba(138, 132, 132, 0.61);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  border-radius: 50%;
+  border: 1px solid rgba(138, 132, 132, 0.61);
+  aspect-ratio: 1;
+}
+
+.o1--line--section .line {
+  font-size: 5em;
+  font-weight: 10;
+  color: rgba(138, 132, 132, 0.411);
+  transform: translateY(7%);
 }
