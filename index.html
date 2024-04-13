@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-
     <title>Meet landing page</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -25,6 +23,12 @@
           <img
             src="/assets/desktop/image-hero-left.png"
             alt="images of several people"
+            class="desktop--hero--image"
+          />
+          <img
+            src="/assets/tablet/image-hero.png"
+            alt="images of several people"
+            class="tablet--hero--image"
           />
         </div>
         <div class="hero--text--content">
@@ -34,14 +38,19 @@
             collaborate across any device.
           </p>
           <div class="hero--btns">
-            <button>Download <span>v1.3</span></button>
-            <button>What is it?</button>
+            <div>
+              <button class="first--hero--btn">
+                Download <span>v1.3</span>
+              </button>
+            </div>
+            <div><button class="second--hero--btn">What is it?</button></div>
           </div>
         </div>
         <div>
           <img
             src="/assets/desktop/image-hero-right.png"
             alt="images of several people"
+            class="desktop--hero--image"
           />
         </div>
       </section>

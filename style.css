@@ -40,11 +40,12 @@ body {
 header {
   display: flex;
   justify-content: center;
-  padding: 2.5em 0;
+  padding: 3.5em 0;
 }
 
 .hero--section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
   align-items: center;
   gap: 1em;
@@ -65,7 +66,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3.5em 5em 0 5em;
+  padding: 3.5em 1em 0 1em;
 }
 
 .hero--text--content h1 {
@@ -83,32 +84,43 @@ header {
 
 .hero--btns {
   margin-top: 1.4em;
+  display: flex;
 }
 
 .hero--btns button {
   border: 0;
   border-radius: 29px;
   padding: 0.8em 1.2em;
+  cursor: pointer;
   color: var(--color-7);
   font-weight: bold;
+  transition: background-color 0.2s ease-in;
 }
 
 .hero--btns button span {
   color: var(--color-5);
 }
 
-.hero--btns button:first-child {
+.hero--btns .first--hero--btn {
   background-color: var(--color-1);
   margin-right: 0.3em;
 }
 
-.hero--btns button:last-child {
+.hero--btns .first--hero--btn:hover {
+  background-color: #4d97a9d3;
+}
+
+.hero--btns .second--hero--btn {
   background-color: var(--color-2);
+}
+
+.hero--btns .second--hero--btn:hover {
+  background-color: #855fb1c7;
 }
 
 .o1--line--section,
 .o2--line--section {
-  min-height: 15em;
+  min-height: 20em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,6 +175,12 @@ header {
 
 .img--gallery img {
   border-radius: 0.7em;
+  cursor: pointer;
+}
+
+.img--gallery img:hover {
+  transform: scale(110%, 110%);
+  transition: all 0.5s ease-in-out;
 }
 
 .modern--use--section {
@@ -176,7 +194,7 @@ header {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 5em 0 2em 0;
+  padding: 7em 0 2em 0;
 }
 
 .modern--use--section h4 {
@@ -212,13 +230,16 @@ header {
 footer {
   position: relative;
   background-image: url(/assets/desktop/image-footer.jpg);
-  min-height: 17em;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.tablet--hero--image {
+  display: none;
+}
+
 .footer--content {
-  padding: 5em 6em;
+  padding: 7.5em 8em;
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   align-items: center;
@@ -248,6 +269,11 @@ footer {
   color: var(--color-7);
   border-radius: 29px;
   padding: 0.8em 1.2em;
+  cursor: pointer;
+}
+
+.footer--btn--container button:hover {
+  background-color: #855fb1c7;
 }
 
 .footer--btn--container span {
@@ -258,4 +284,124 @@ footer {
   z-index: 20;
   display: flex;
   justify-content: center;
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+  .hero--section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .tablet--hero--image {
+    transform: translateX(5%);
+  }
+
+  .hero--text--content {
+    padding: 2em 5em;
+  }
+
+  .hero--text--content h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .o1--line--section,
+  .o2--line--section {
+    min-height: 10em;
+  }
+
+  .modern--use--section p {
+    font-size: 16px;
+  }
+
+  footer {
+    background-image: url(/assets/tablet/image-footer.jpg);
+    background-size: cover;
+  }
+
+  .desktop--hero--image {
+    display: none;
+  }
+
+  .tablet--hero--image {
+    display: block;
+  }
+
+  .footer--content {
+    grid-template-columns: 1fr;
+    padding: 5em 4em;
+  }
+
+  .footer--content h3 {
+    text-align: center;
+  }
+
+  .footer--content p {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+  footer {
+    background-image: url(/assets/mobile/image-footer.jpg);
+  }
+
+  .hero--text--content {
+    padding: 1em;
+  }
+
+  .hero--text--content h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .hero--text--content p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .hero--section div:last-child,
+  .hero--section div:first-child {
+    transform: translate(0);
+  }
+
+  .hero--btns {
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero--btns .first--hero--btn {
+    padding: 1em 3em;
+  }
+
+  .hero--btns .second--hero--btn {
+    padding: 1em 2em;
+  }
+
+  /* .img--gallery {
+    flex-wrap: wrap;
+  } */
+
+  .modern--use--section h2 {
+    font-size: 32px;
+    padding: 0.3em 0.5em;
+  }
+
+  .modern--use--section p {
+    font-size: 16px;
+    padding: 0 1em;
+  }
+
+  .footer--content {
+    padding: 3em 2em;
+  }
+
+  .footer--btn--container button {
+    padding: 1em 1.5em;
+  }
 }
