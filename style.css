@@ -219,9 +219,11 @@ footer {
 
 .footer--content {
   padding: 5em 6em;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  grid-gap: 2em;
 }
 
 .footer--content h3 {
@@ -235,8 +237,9 @@ footer {
   font-size: 18px;
   line-height: 26px;
   color: var(--color-7);
-  padding: 0 25em 0 10em;
+  /* padding: 0 25em 0 10em; */
   z-index: 2;
+  max-width: fit-content;
 }
 
 .footer--btn--container button {
@@ -253,4 +256,6 @@ footer {
 
 .footer--btn--container {
   z-index: 20;
+  display: flex;
+  justify-content: center;
 }
