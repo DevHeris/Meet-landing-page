@@ -383,10 +383,19 @@ footer {
     padding: 1em 2em;
   }
 
-  /* .img--gallery {
-    flex-wrap: wrap;
-  } */
+  .img--gallery img {
+    max-width: 8em;
+  }
 
+  .img--gallery {
+    flex-wrap: wrap;
+    margin-inline: auto;
+    justify-content: center;
+  }
+  .modern--use--section {
+    padding-top: 3em;
+    padding-bottom: 0;
+  }
   .modern--use--section h2 {
     font-size: 32px;
     padding: 0.3em 0.5em;
@@ -403,5 +412,9 @@ footer {
 
   .footer--btn--container button {
     padding: 1em 1.5em;
+  }
+
+  .tablet--hero--image {
+    transform: translate(0);
   }
 }
